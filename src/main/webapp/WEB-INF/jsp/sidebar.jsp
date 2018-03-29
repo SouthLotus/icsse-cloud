@@ -3,11 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 </div>
 <div class="col-md-4">
-	<div class="panel panel-primary panel-listnews">
-		<div class="panel-heading panel-heading-listnews">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
 			<h3 class="panel-title">
 				<a href="list-notifications"
-					style="color: white; text-decoration: none;">Latest News</a>
+					style="color: white; text-decoration: none;"><b>TIN MỚI NHẤT</b></a>
 			</h3>
 		</div>
 		<div class="panel-body media sidebar-list" id="listnews">
@@ -25,9 +25,9 @@
 		</div>
 	</div>
 
-	<div class="panel panel-primary panel-deadline">
-		<div class="panel-heading panel-heading-deadlines">
-			<h3 class="panel-title">Important Deadlines</h3>
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title"><b>IMPORTANT DEADLINES</b></h3>
 		</div>
 		<div class="panel-body">
 			<p style="text-align: justify;">

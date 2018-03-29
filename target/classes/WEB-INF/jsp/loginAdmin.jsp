@@ -3,16 +3,17 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="Static/css/Css.css">
-
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="Static/css/Css.css" />
+<link href="Static/css/style.css" rel="stylesheet" />
+<link href="Static/images/icon.png" rel="icon" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
@@ -22,9 +23,10 @@
 <title>Admin đăng nhập</title>
 </head>
 <body>
-<div class="container" style="padding-top: 60px;">
-		<h2 class="text-sm-center">Đăng nhập</h2>
+<div class="container" style="padding-top: 60px;text-align:center;">
+		<img src="Static/images/admin.png" alt="admin" style="max-width:100%;height:auto;" />
 	</div>
+	<br />
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 offset-2">
@@ -57,7 +59,7 @@
 								</div>
 							</fieldset>
 							
-							<input type="submit" class="btn btn-outline-primary btn-block" id="login" value="Đăng nhập"/>
+							<input type="submit" class="btn btn-success btn-block" id="login" value="Đăng nhập"/>
 						</div>
 					</div>
 				</form>

@@ -1,3 +1,7 @@
+body {
+	background:#F1F1F1;
+}
+
 header {
 	padding-top: 20px;
 	padding-bottom:20px;
@@ -33,7 +37,7 @@ footer{
 }
 
 footer .school{
-	color: #333;
+	color: white;
 }
 
 .main-slider{
@@ -126,23 +130,19 @@ footer .school{
 }
 
 .panel-listnews{
-	border-color: white;
-}
-
-.panel-primary {
-	background-color: #fff;
+	border-color: MEDIUMSEAGREEN;
 }
 
 .panel-primary > .panel-heading-listnews {
-background: #333;
+background: MEDIUMSEAGREEN;
 }
 
 .panel-deadline{
-	border-color:#333;
+	border-color: CRIMSON;
 }
 
 .panel-primary > .panel-heading-deadlines {
-background: #333;
+background: CRIMSON;
 }
 
 #img-banner {

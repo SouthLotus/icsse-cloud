@@ -14,20 +14,20 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img
-					src="https://hcmute.edu.vn/Resources/imagesPortlet/bab661d8-b38d-4aba-841c-1b4a894fe1d4/Don%20nhan%20chung%20chi%20AUN%20thang%2011-2017.jpg"
+				<img style="width:100%;height:auto;"
+					src="http://icsse2017.hcmute.edu.vn/Resources/imagesPortlet/e28a24d5-befe-4213-a3d5-2e1ebcb2a71e/HNQT2.jpg"
 					alt="Ho Chi Minh City 1">
 			</div>
 
 			<div class="item">
-				<img
-					src="http://hcmute.edu.vn/Resources/imagesPortlet/bab661d8-b38d-4aba-841c-1b4a894fe1d4/Anh%20slide%20Phung%20Xuan%20Nha.jpg"
+				<img style="width:100%;height:auto;"
+					src="http://icsse2017.hcmute.edu.vn/Resources/imagesPortlet/e28a24d5-befe-4213-a3d5-2e1ebcb2a71e/HNQT1.jpg"
 					alt="Ho Chi Minh City 2">
 			</div>
 
 			<div class="item">
-				<img
-					src="http://hcmute.edu.vn/Resources/imagesPortlet/bab661d8-b38d-4aba-841c-1b4a894fe1d4/Hoc%20bong%20lao%201.jpg"
+				<img style="width:100%;height:auto;"
+					src="http://icsse2017.hcmute.edu.vn/Resources/imagesPortlet/e28a24d5-befe-4213-a3d5-2e1ebcb2a71e/HNQT3.jpg"
 					alt="Ho Chi Minh City 3">
 			</div>
 		</div>

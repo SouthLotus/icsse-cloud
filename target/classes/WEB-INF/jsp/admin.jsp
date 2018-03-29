@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,18 +11,18 @@
 <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
 
 <title>News Manager</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link href="Static/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="Static/css/Css.css">
+<link href="Static/css/style.css" rel="stylesheet">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- jQuery -->
+<script src="Static/js/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="Static/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="Static/ckeditor"></script>
 
 <!--[if lt IE 9]>
@@ -32,36 +31,71 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="container">
-		<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-			<!-- Brand/logo -->
-			<a class="navbar-brand" href="home">Tin tức</a>
+		<div class="container header" style="padding:0;">
+			<!--<ul>
+				<li><a href="#"><i class="fa fa-user-plus"
+						aria-hidden="true"></i> Sign Up</a></li>
+				<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>
+						Login</a></li>
+			</ul>-->
+			<img src="Static/images/banner.jpg" style="height: auto; width: 100%;" />
 
-			<!-- Links -->
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="new-task">Thêm
-						Tin tức</a></li>
+		</div>
 
-				<li class="nav-item"><a class="nav-link" href="all-tasks">All
-						Tin Tức</a></li>
-				<li class="nav-item"><a class="nav-link" href="xem"
-					target="_blank">Xem tin tức</a></li>
-				<li class="nav-item"><a class="nav-link glyphicon glyphicon-off" href="/logout"
-					target="_blank">Đăng xuất</a></li>
-			</ul>
+	<div class="container" style="padding:0;">
+		<nav class="navbar navbar-inverse navbar-static-top" style="margin:0;">
+
+			<!-- Nav -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#menu">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+			</div>
+			<!-- Nav collapse -->
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="nav navbar-nav">
+					<li class="active"><a class="navbar-brand" href="home"><span
+							class="glyphicon glyphicon-send"></span> Tin tức</a></li>
+					<li class="nav-item"><a class="nav-link" href="new-task">Thêm
+							Tin tức</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="all-tasks">All
+							Tin Tức</a></li>
+					<li class="nav-item"><a class="nav-link" href="xem"
+						target="_blank">Xem tin tức</a></li>
+					<li class="nav-item"><a href="/logout" target="_blank"><span
+							class="nav-link glyphicon glyphicon-off"></span> Đăng xuất</a></li>
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+
 		</nav>
 	</div>
 
 	<c:choose>
 		<c:when test="${mode == 'MODE_HOME'}">
-			<div class="container" id="homeDiv">
-				<div class="jumbotron text-center ">
+			<div class="container" id="homeDiv" style="background:white;">
+				<div class="jumbotron text-center" style="background:white;">
 					<h1>Welcome to News Manager</h1>
+					<h3 id="clock"></h3>
 				</div>
 			</div>
+			<script>
+				setInterval(displayTime, 1000);
+				function displayTime() {
+					var d = new Date();
+					document.getElementById("clock").innerHTML = d
+							.toLocaleString();
+				}
+			</script>
 		</c:when>
 		<c:when test="${mode == 'MODE_TINTUC'}">
-			<div class="container text-center " id="tasksDiv">
+			<div class="container text-center " id="tasksDiv" style="background:white;">
 				<h3>My News</h3>
 				<hr>
 				<div class="table-responsive">
@@ -88,9 +122,9 @@
 									<td><fmt:formatDate pattern="HH:MM dd/MM/yyyy"
 											value="${tintuc.thoigian}" /></td>
 									<td><a href="update-task?id=${tintuc.id}"><span><i
-												class="fa fa-pencil" aria-hidden="true" style="color: black"></i></span></a></td>
+												class="glyphicon glyphicon-pencil" aria-hidden="true" style="color: black"></i></span></a></td>
 									<td><a href="delete-task?id=${tintuc.id}"><span><i
-												class="fa fa-trash" aria-hidden="true" style="color: black"></i></span></a></td>
+												class="glyphicon glyphicon-trash" aria-hidden="true" style="color: black"></i></span></a></td>
 								</tr>
 							</c:forEach>
 						</tbody>
@@ -99,11 +133,11 @@
 			</div>
 		</c:when>
 		<c:when test="${mode == 'MODE_NEW'|| mode == 'MODE_UPDATE'}">
-			<div class="container ">
+			<div class="container "  style="background:white;">
 				<h3 style="text-align: center;">Add News</h3>
 				<hr>
 				<div class="row">
-					<div class="col-lg-8 offset-2">
+					<div class="col-lg-8 offset-2 col-lg-offset-2">
 
 						<form action="save-task" method="post"
 							enctype="multipart/form-data" runat="server">
@@ -121,8 +155,8 @@
 
 									<fieldset class="form-group">
 
-										<img width="300" height="300"
-											src="http://placehold.it/300x300" class="card-img-top"
+										<img style="max-width:100%;height:auto;"
+											src="" alt="Image" class="card-img-top"
 											id="blah" />
 									</fieldset>
 
@@ -190,6 +224,23 @@
 
 
 
+<div class="container" style="padding-left:0;">
+	<footer class="py-5 bg-primary">
 
+		<div class="school" style="color:white;margin:20px;">
+			<p>
+				4th International Conference on Green Technology and Sustainable
+				Development <br> HCMC University of Technology and Education
+			</p>
+			<p>
+				<strong>Add:</strong> No 1 Vo Van Ngan Street, Linh Chieu Ward, Thu
+				Duc District, Ho Chi Minh City<br> <strong>Tel:</strong>
+				(+84.8) 37 221 223<br> <strong>Ext:</strong> 8161 or 8443<br>
+				<strong>E-mail:</strong> gtsd2018@hcmute.edu.vn
+			</p>
+		</div>
+
+	</footer>
+</div>
 </body>
 </html>

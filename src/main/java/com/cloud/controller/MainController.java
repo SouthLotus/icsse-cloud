@@ -196,6 +196,9 @@ public class MainController {
 			int nid = Integer.parseInt(id);
 			Tintuc tintuc = tintucService.findTintuc(nid);
 			request.setAttribute("tintuc", tintuc);
+			List<Tintuc> tintucs = tintucService.layMoiNhat();
+			request.setAttribute("tintucs", tintucs);
+			request.setAttribute("mode", "MODE_INDEX");
 			return "show";
 		} catch(NumberFormatException e) {
 			e.printStackTrace();

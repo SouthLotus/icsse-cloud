@@ -5,7 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,6 +15,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+	<link href="Static/css/style.css" rel="stylesheet" />
+<link href="Static/images/icon.png" rel="icon" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
@@ -22,27 +24,25 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 <title>Xem tin tức</title>
-
-
 </head>
 <body>
 
 
 	<div>
-		<div class="header">
+		<div class="container header" style="padding:0;">
 			<!--<ul>
 				<li><a href="#"><i class="fa fa-user-plus"
 						aria-hidden="true"></i> Sign Up</a></li>
 				<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>
 						Login</a></li>
 			</ul>-->
-			<img src="Static/image/nd.jpg" style="height: auto; width: 100%;" />
+			<img src="Static/images/banner.jpg" style="height: auto; width: 100%;" />
 
 		</div>
 
 	</div>
 
-
+<div class="container" style="padding:0;">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top"
 		id="menutop"> <a class="navbar-brand" href="">Trang chủ</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -82,11 +82,11 @@
 
 
 	</nav>
+</div>
 
 
 
-
-	<div class="container-fluid">
+	<div class="container container-fluid" style="padding:0;background:white;">
 		<br>
 			<div id="main">
 				<div class="row">
@@ -100,33 +100,7 @@
 					<div class="col-md-8 col-lg-8" id="center">
 						<div class="row"></div>
 						<br />
-
-						<!-- Bat dau bai viet -->
-						<div class="col-md-12 col-lg-12">
-							<div style="text-align: justify">
-								<!-- Tieu de Bai viet -->
-								<c:choose>
-									<c:when test="${mode == 'MODE_tintucchinh'}">
-										<div>
-											<h2>${tintuc.name}</h2>
-											<span style="color: #999;"><fmt:formatDate
-													pattern="HH:MM-dd/MM/yyyy" value="${tintuc.thoigian}" /></span>
-										</div>
-
-										<!-- Noi dung bai viet -->
-										<div>${tintuc.noidung}</div>
-									</c:when>
-								</c:choose>
-							</div>
-						</div>
-
-
 						<!-- Ket thuc bai viet -->
-
-
-
-
-
 
 						<div class="clear">
 							<br>
@@ -139,13 +113,6 @@
 						<h3>Xem thêm</h3>
 						<c:forEach var="tintuc" items="${lienquan}">
 							<div class="row">
-								<div style="float: left;"
-									class="col-xs-12 col-sm-12 col-md-12 col-lg-4 ">
-									<a href="xemthem?id=${tintuc.id}"> <iframe
-											src="${tintuc.hinhanh}" width="180" height="120"></iframe>
-									</a>
-								</div>
-
 								<div style="float: right; padding-left: auto;"
 									class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 									<div>
@@ -175,19 +142,7 @@
 
 			</div>
 	</div>
-	</div>
-	<style type="text/css">
-.rut-gon {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3; /* number of lines to show */
-	line-height: 1.4em; /* fallback */
-	max-height: 4.2em; /* cái này phải = line-height x 2 */
-}
-</style>
-
+	<div class="container" style="padding:0;">
 	<footer class="clearfix" id="footer">
 	<div class="container">
 		<div class="row">
@@ -206,8 +161,6 @@
 				<h4 class="widget-title">Tài khoản</h4>
 				<ul class="widget-menu">
 					<li><a href="#">Trang chủ</a></li>
-
-					</li>
 					<li><a href="#">Tin tức</a></li>
 					<li><a href="#">Liên hệ</a></li>
 				</ul>
@@ -237,5 +190,6 @@
 		</div>
 	</div>
 	</footer>
+	</div>
 </body>
 </html>

@@ -2,10 +2,10 @@
 	pageEncoding="utf-8"%>
 </div>
 </div>
-<div class="container">
+<div class="container" style="padding-left:0;">
 	<footer class="py-5 bg-primary">
 
-		<div class="school" style="color:white;">
+		<div class="school" style="color:white;margin:20px;">
 			<p>
 				4th International Conference on Green Technology and Sustainable
 				Development <br> HCMC University of Technology and Education

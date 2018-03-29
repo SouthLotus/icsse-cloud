@@ -9,11 +9,11 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Website Hội Nghị </title>
+<title>ICSSE - 2018</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="Static/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="Static/images/icon.png" rel="icon" />
 <!-- Custom CSS -->
 <link href="Static/css/style.css" rel="stylesheet">
 
@@ -40,7 +40,7 @@
 
 	<!-- Navigation -->
 	<div class="container">
-		<nav class="navbar navbar-inverse navbar-static-top bg-primary">
+		<nav class="navbar navbar-inverse navbar-static-top">
 
 			<!-- Nav -->
 			<div class="navbar-header">
@@ -57,10 +57,12 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/"><span
 							class="glyphicon glyphicon-home"></span> Trang Chủ</a></li>
-
+					<li class=""><a href="contacts"><span
+							class="glyphicon glyphicon-floppy-disk"></span> Chương trình</a></li>
+					<li class=""><a href="contacts"><span
+							class="glyphicon glyphicon-floppy-disk"></span> Thông tin</a></li>
 					<li class=""><a href="venue_hotel"><span
-							class="fa fa-map-marker"></span> Chương Trình Đào Tạo</a></li>
-
+							class="	glyphicon glyphicon-picture"></span> Hình ảnh</a></li>
 					<li class=""><a href="contacts"><span
 							class="glyphicon glyphicon-comment"></span> Liên Hệ</a></li>
 				</ul>
