@@ -65,6 +65,8 @@
 							class="	glyphicon glyphicon-picture"></span> Hình ảnh</a></li>
 					<li class=""><a href="contacts"><span
 							class="glyphicon glyphicon-comment"></span> Liên Hệ</a></li>
+					<li class=""><a href="login"><span
+							class="glyphicon glyphicon-user"></span> Đăng nhập</a></li>
 				</ul>
 
 			</div>
