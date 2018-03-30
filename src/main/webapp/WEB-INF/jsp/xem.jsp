@@ -44,7 +44,7 @@
 
 <div class="container" style="padding:0;">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top"
-		id="menutop"> <a class="navbar-brand" href="">Trang chủ</a>
+		id="menutop"> <a class="navbar-brand" href="/">Trang chủ</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#collapsibleNavbar">
 		<span class="navbar-toggler-icon"></span>
